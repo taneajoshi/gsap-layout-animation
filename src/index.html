@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Layout animation</title>
+		<!-- Generate Meta Tags via https://www.opengraph.xyz -->
+		<meta name="description" content="A simple layout switch example where we switch from menu to content page. Built using gsap, html, css" />
+		<meta name="keywords" content="gsap, layout, flip plugin, animation, web development" />
+		<meta name="author" content="tanea joshi" />
+		<link rel="stylesheet" href="https://use.typekit.net/jdl7wqk.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script>document.documentElement.className="preloader";</script>
+	</head>
+
+	<body class="loading">
+		<header>
+			<nav>
+				<a class="hover-line" href="https://www.linkedin.com/in/taneajoshi"  target="_blank">LinkedIn</a>
+				<a class="hover-line" href="https://github.com/taneajoshi" target="_blank">GitHub</a>
+			</nav>
+		</header>
+		<main>
+			<div class="intro-sec">
+				<div class="row row--1"><span class="row__text overflow-hidden"><span data-direction="top">The best</span></span> <span class="row__text overflow-hidden"></span></div>
+				<div class="row row--2"><span class="row__text overflow-hidden"><span data-direction="left">destinations</span></span> <span class="row__text overflow-hidden"></span></div>
+				<div class="row row--3"><span class="row__text overflow-hidden"><span data-direction="right">for your</span></span> <span data-direction="right" class="row__text overflow-hidden"></span></div>
+				<div class="row row--4"><span class="row__text overflow-hidden"><span data-direction="bottom">next trip</span></span></div>
+				<div class="image image--up">
+					<div class="image__inner" style="background-image:url(img/1.jpg)" data-direction="right"></div>
+				</div>
+				<div class="image image--down">
+					<div class="image__inner" style="background-image:url(img/2.jpg)" data-direction="left"></div>
+				</div>
+			</div>
+			<!-- CONTENT WRAPPER -->
+			<section class="content-wrap">
+				<!-- CONTENT ONE -->
+				<div class="content">
+					<div class="content__row content__row--image"></div>
+					<div class="content__row content__row--text">
+						<h2 class="content__title">
+							<span class="overflow-hidden"><span>Blog heading goes here</span></span>
+						</h2>
+						<p class="overflow-hidden"><span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt assumenda fugit ut omnis similique perspiciatis enim amet eaque quod ipsam quia voluptatum soluta, facilis est, repudiandae harum debitis! Repellendus, vitae veritatis pariatur voluptate, molestias culpa aspernatur qui quaerat, tenetur ut temporibus quas est. Numquam tenetur laboriosam nihil, minima autem debitis rem, placeat quasi ipsam ea voluptatibus minus similique sequi ex recusandae. Minus fugit enim, sit ipsa cupiditate assumenda vel dignissimos aliquam eveniet dicta temporibus error unde? Voluptatibus vitae voluptas voluptatum? Exercitationem repudiandae voluptas, mollitia assumenda ex ipsum possimus tenetur reprehenderit nemo atque obcaecati, quibusdam ab eaque? Excepturi ut magni sint.</span></p>
+						<span class="content__number"><span class="overflow-hidden"><span>1</span></span></span>
+						<button class="content__back unbutton">
+							<svg viewBox="0 0 50 9"><path d="m0 4.5 5-3m-5 3 5 3m45-3h-77"></path></svg>
+						</button>
+						<div class="content__meta">
+							<span class="content__meta-text"><span class="overflow-hidden"><span>Previous Blog</span></span></span>
+							<span class="content__meta-text"><span class="overflow-hidden"><span>Next Blog</span></span></span>
+						</div>
+					</div>
+				</div>
+				<!-- CONTENT TWO -->
+				<div class="content">
+					<div class="content__row content__row--text">
+						<h2 class="content__title">
+							<span class="overflow-hidden"><span>Blog title two</span></span>
+						</h2>
+						<p class="overflow-hidden"><span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt assumenda fugit ut omnis similique perspiciatis enim amet eaque quod ipsam quia voluptatum soluta, facilis est, repudiandae harum debitis! Repellendus, vitae veritatis pariatur voluptate, molestias culpa aspernatur qui quaerat, tenetur ut temporibus quas est. Numquam tenetur laboriosam nihil, minima autem debitis rem, placeat quasi ipsam ea voluptatibus minus similique sequi ex recusandae. Minus fugit enim, sit ipsa cupiditate assumenda vel dignissimos aliquam eveniet dicta temporibus error unde? Voluptatibus vitae voluptas voluptatum? Exercitationem repudiandae voluptas, mollitia assumenda ex ipsum possimus tenetur reprehenderit nemo atque obcaecati, quibusdam ab eaque? Excepturi ut magni sint.</span></p>
+						<span class="content__number"><span class="overflow-hidden"><span>2</span></span></span>
+						<button class="content__back unbutton">
+							<svg viewBox="0 0 50 9"><path d="m0 4.5 5-3m-5 3 5 3m45-3h-77"></path></svg>
+						</button>
+						<div class="content__meta">
+							<span class="content__meta-text"><span class="overflow-hidden"><span>Previous Blog</span></span></span>
+							<span class="content__meta-text"><span class="overflow-hidden"><span>Next Blog</span></span></span>
+						</div>
+					</div>
+					<div class="content__row content__row--image"></div>
+				</div>
+			</section>
+		</main>
+		<svg class="cursor" width="100" height="100" viewBox="0 0 100 100">
+			<defs>
+				<filter id="cursor-filter" x="-50%" y="-50%" width="200%" height="200%" 
+				filterUnits="objectBoundingBox">
+					<feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="3" result="warp" />
+					<feOffset dx="0" result="warpOffset" />
+					<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="50" in="SourceGraphic" in2="warpOffset" />
+				</filter>
+			</defs>
+			<circle class="cursor__inner" cx="58" cy="58" r="15"/>
+		</svg>
+		<svg class="cursor" width="100" height="100" viewBox="0 0 100 100" data-amt="0.15" data-radius-enter="40">
+			<circle class="cursor__inner" cx="50" cy="50" r="10"/>
+		</svg>
+		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
+		<script type="module" src="js/index.js"></script>
+	</body>
+</html>
