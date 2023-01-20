@@ -265,6 +265,10 @@ nav a {
     position: relative;
 }
 
+.content.layout-2 {
+	grid-template-rows: 1fr 50%;
+}
+
 .content--open {
 	opacity: 1;
 	pointer-events: auto;

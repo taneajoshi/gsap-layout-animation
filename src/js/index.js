@@ -131,6 +131,11 @@ const closeContent = (image, position) => {
         ease: 'expo',
         xPercent: 0,
         yPercent: 0,
+        /*stagger: {
+            each: 0.08,
+            grid: 'auto',
+            from: 'random'
+        }*/
     }, 'intro');
 
 };
