@@ -1,6 +1,6 @@
 A simple layout switch example.
 
-[Demo](http://tympanus.net/Development/LinesToLayout/)
+[Demo](https://layout-switch-animation.netlify.app/)
 
 ## Installation
 
